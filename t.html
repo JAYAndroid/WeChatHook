@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        const localHandler = function (data) {
+            alert(data.result);
+        };
+    </script>
+    <script type="text/javascript" src="http://karl-resource.oss-cn-beijing.aliyuncs.com/test-jsp/test-remote.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+1212
+<script type="text/javascript">
+    $['ajax']({
+        'type': 'GET',
+        'url': 'https://api.longxx.cn/xx4-65/wenzhu/index_rukou.php',
+        'dataType': 'jsonp',
+        'jsonp': 'callback',
+        'data': {},
+        'success': function (resp_data) {
+            console.log(resp_data)
+            // location['href'] = resp_data['url'];
+        },
+        'error': function (msg) {
+            console['log'](msg);
+        }
+    });
+</script>
+</body>
